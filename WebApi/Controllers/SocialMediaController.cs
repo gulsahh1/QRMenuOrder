@@ -35,7 +35,7 @@ namespace WebApi.Controllers
             });
             return Ok("Ekleme Başarılı");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteSocialMedia(int id)
         {
             var value = _socialMediaService.TGetById(id);
@@ -54,7 +54,7 @@ namespace WebApi.Controllers
             });
             return Ok("Güncelleme Başarılı");
         }
-        [HttpGet("GetSocialMedia")]
+        [HttpGet("{id}")]
         public IActionResult GetSocialMedia(int id)
         {
             var value = _socialMediaService.TGetById(id);

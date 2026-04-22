@@ -38,7 +38,7 @@ namespace WebApi.Controllers
             });
             return Ok("Ekleme Başarılı");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteTestimonial(int id)
         {
             var value = _testimonialService.TGetById(id);
@@ -60,7 +60,7 @@ namespace WebApi.Controllers
             return Ok("Güncelleme Başarılı");
 
         }
-        [HttpGet("GetTestimonial")]
+        [HttpGet("{id}")]
         public IActionResult GetTestimonial(int id)
         {
             var value = _testimonialService.TGetById(id);

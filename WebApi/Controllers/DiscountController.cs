@@ -38,7 +38,7 @@ namespace WebApi.Controllers
             return Ok("Ekleme Başarılı");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteDiscount(int id)
         {
             var value = _discountService.TGetById(id);
@@ -59,7 +59,7 @@ namespace WebApi.Controllers
             return Ok("Güncelleme Başarılı");
         }
 
-        [HttpGet("GetDiscount")]
+        [HttpGet("{id}")]
         public IActionResult GetDiscount(int id)
         {
             var value = _discountService.TGetById(id);

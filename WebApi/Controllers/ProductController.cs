@@ -51,11 +51,12 @@ namespace WebApi.Controllers
                 Price = createProductDto.Price,
                 ProductDescription = createProductDto.ProductDescription,
                 ProductStatus = createProductDto.ProductStatus,
-                ImageUrl = createProductDto.ImageUrl
+                ImageUrl = createProductDto.ImageUrl,
+                CategoryID = createProductDto.CategoryID
             });
             return Ok("Ekleme Başarılı");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteProduct(int id)
         {
             var value = _productService.TGetById(id);
@@ -72,11 +73,12 @@ namespace WebApi.Controllers
                 Price = updateProductDto.Price,
                 ProductDescription = updateProductDto.ProductDescription,
                 ProductStatus = updateProductDto.ProductStatus,
-                ImageUrl = updateProductDto.ImageUrl
+                ImageUrl = updateProductDto.ImageUrl,
+                CategoryID = updateProductDto.CategoryID
             });
             return Ok("Güncelleme Başarılı");
         }
-        [HttpGet("GetProduct")]
+        [HttpGet("{id}")]
         public IActionResult GetProduct(int id)
         {
             var value = _productService.TGetById(id);

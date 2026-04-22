@@ -1,0 +1,62 @@
+﻿@model CreateFeatureDto
+@{
+    ViewData["Title"] = "CreateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="content">
+	<div class="container-fluid">
+		<h4 class="page-title">Öne Çıkanlar </h4>
+		<div class="row">
+			<div class="col-md-12">
+				<form method="post">
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Yeni Girişi</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="FeatureTitle1">Başlık 1 Giriniz </label>
+								<input type="text" class="form-control" asp-for=FeatureTitle1 id="FeatureTitle1">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="FeatureDesc1">Açıklama 1 Giriniz </label>
+								<input type="text" class="form-control" asp-for=FeatureDesc1 id="FeatureDesc1">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="FeatureTitle2">Başlık 2 Giriniz </label>
+								<input type="text" class="form-control" asp-for=FeatureTitle2 id="FeatureTitle2">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="FeatureDesc2">Açıklama 2 Giriniz </label>
+								<input type="text" class="form-control" asp-for=FeatureDesc2 id="FeatureDesc2">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="FeatureTitle3">Başlık 3 Giriniz </label>
+								<input type="text" class="form-control" asp-for=FeatureTitle3 id="FeatureTitle3">
+							</div>
+						</div>
+						<div class="card-body">
+							<div class="form-group">
+								<label for="FeatureDesc3">Açıklama 3 Giriniz </label>
+								<input type="text" class="form-control" asp-for=FeatureDesc3 id="FeatureDesc3">
+							</div>
+						</div>
+						<div class="card-action">
+							<button class="btn btn-primary">Ekle</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+

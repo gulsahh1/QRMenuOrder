@@ -38,7 +38,7 @@ namespace WebApi.Controllers
             return Ok("Ekleme Başarılı");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteCategory(int id)
         {
             var value = _categoryService.TGetById(id);
@@ -60,7 +60,7 @@ namespace WebApi.Controllers
             return Ok("Güncelleme Başarılı");
         }
 
-        [HttpGet("GetCategory")]
+        [HttpGet("{id}")]
         public IActionResult GetCategory(int id)
         {
             var value = _categoryService.TGetById(id);

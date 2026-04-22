@@ -38,7 +38,7 @@ public class AboutController : ControllerBase
 
     }
 
-    [HttpDelete]
+    [HttpDelete("{id}")]
     public IActionResult DeleteAbout(int id)
     {
         var value = _aboutService.TGetById(id);
@@ -59,7 +59,7 @@ public class AboutController : ControllerBase
         return Ok("Güncelleme Başarılı");
     }
 
-    [HttpGet("GetAbout")]
+    [HttpGet("{id}")]
     public IActionResult GetAbout(int id)
     {
         var value = _aboutService.TGetById(id);

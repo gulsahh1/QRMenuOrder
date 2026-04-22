@@ -42,7 +42,7 @@ namespace WebApi.Controllers
             return Ok("Ekleme Başarılı");
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteContact(int id)
         {
             var value = _contactService.TGetById(id);
@@ -62,7 +62,7 @@ namespace WebApi.Controllers
             });
             return Ok("Güncelleme Başarılı");
         }
-        [HttpGet("GetContact")]
+        [HttpGet("{id}")]
         public IActionResult GetContact(int id)
         {
             var value = _contactService.TGetById(id);

@@ -14,4 +14,6 @@ public class UpdateProductDto
     public string? ProductDescription { get; set; }
     public string? ImageUrl { get; set; }
     public bool? ProductStatus { get; set; }
+    public int CategoryID { get; set; }
+
 }

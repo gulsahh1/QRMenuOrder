@@ -38,7 +38,7 @@ namespace WebApi.Controllers
             });
             return Ok("Ekleme Başarılı");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteFeature(int id)
         {
             var value = _featureService.TGetById(id);
@@ -60,7 +60,7 @@ namespace WebApi.Controllers
             });
             return Ok("Güncelleme Başarılı");
         }
-        [HttpGet("GetFeature")]
+        [HttpGet("{id}")]
         public IActionResult GetFeature(int id)
         {
             var value =_featureService.TGetById(id);
