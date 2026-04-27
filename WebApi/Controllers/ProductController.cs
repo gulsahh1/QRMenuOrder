@@ -26,6 +26,47 @@ namespace WebApi.Controllers
             var values = _mapper.Map<List<ResultProductDto>>(_productService.TGetListAll());
             return Ok(values);
         }
+
+        [HttpGet("ProductCount")]
+        public IActionResult ProductCount() 
+        { 
+            return Ok(_productService.TProductCount());
+        }
+
+        [HttpGet("ProductCountByCoffee")]
+        public IActionResult ProductCountByCoffee()
+        {
+            return Ok(_productService.TProductCountByCategoryNameCoffee());
+        }
+
+        [HttpGet("ProductPriceAvg")]
+        public IActionResult ProductPriceAvg()
+        {
+            return Ok(_productService.TProductPriceAvg());
+        }
+
+        [HttpGet("ProductCountByDrink")]
+        public IActionResult ProductCountByDrink()
+        {
+            return Ok(_productService.TProductCountByCategoryNameDrink());
+        }
+        [HttpGet("ProductNameByMaxPrice")]
+        public IActionResult ProductNameByMaxPrice()
+        {
+            return Ok(_productService.TProductNameByMaxPrice());
+        }
+        [HttpGet("ProductNameByMinPrice")]
+        public IActionResult ProductNameByMinPrice()
+        {
+            return Ok(_productService.TProductNameByMinPrice());
+        }
+
+        [HttpGet("ProductPriceByCoffee")]
+        public IActionResult ProductPriceByCoffee()
+        {
+            return Ok(_productService.TProductPriceByCoffee());
+        }
+
         [HttpGet("ProductListWithCategory")]
         public IActionResult ProductListWithCategory()
         {
